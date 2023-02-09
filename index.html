@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- FORMS -->
+
+    <form class="js-speaker-form">
+      <label for="name">Username</label>
+      <input id="name" name="user-name" type="text" />
+      <br />
+      <label for="tel">Phone</label>
+      <input id="tel" name="tel" type="tel" />
+      <br />
+      <label for="mail">Email</label>
+      <input id="mail" name="mail" type="email" />
+      <br />
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" />
+      <br />
+      <br />
+
+      <div role="group">
+        <input type="checkbox" name="topic" velue="html" id="html" />
+        <label for="html">HTML</label>
+
+        <input type="checkbox" name="topic" velue="css" id="css" />
+        <label for="css">CSS</label>
+
+        <input type="checkbox" name="topic" velue="js" id="js" />
+        <label for="js">JavaScript</label>
+      </div>
+
+      <div role="group">
+        <input type="radio" name="experience" velue="junior" id="junior" />
+        <label for="junior">Junior</label>
+
+        <input type="radio" name="experience" velue="middle" id="middle" />
+        <label for="middle">Middle</label>
+
+        <input type="radio" name="experience" velue="senior" id="senior" />
+        <label for="senior">Senior</label>
+      </div>
+
+      <label for="date">Date of my project</label>
+      <input
+        type="datetime-local"
+        name="date"
+        id="date"
+        min="2020-04-12T12:00"
+      />
+
+      <br />
+      <label for="pdf">Download yor file</label>
+      <input type="file" name="pdf" id="pdf" />
+      <br />
+      <br />
+
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+
+      <br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <br />
+    <section>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, officia
+          eius ut natus praesentium quaerat eum facere veritatis nisi? Nulla
+          obcaecati in dignissimos illum veniam molestias quod. Explicabo, quae
+          tenetur.
+        </p>
+      </div>
+    </section>
+
+    <script>
+      (() => {
+        document
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+          });
+      })();
+    </script>
+  </body>
+</html>
