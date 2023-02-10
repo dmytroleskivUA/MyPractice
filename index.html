@@ -4,73 +4,123 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Document</title>
+
+    <!-- Custom styles -->
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
+      rel="stylesheet"
+    />
+    <link href="./css/styles.css" rel="stylesheet" />
   </head>
   <body>
     <!-- FORMS -->
 
-    <form class="js-speaker-form">
-      <label for="name">Username</label>
-      <input id="name" name="user-name" type="text" autofocus />
-      <br />
-      <label for="tel">Phone</label>
-      <input id="tel" name="tel" type="tel" />
-      <br />
-      <label for="mail">Email</label>
-      <input id="mail" name="mail" type="email" />
-      <br />
-      <label for="password">Password</label>
-      <input id="password" name="password" type="password" />
-      <br />
-      <br />
-
-      <div role="group">
-        <input type="checkbox" name="topic" velue="html" id="html" />
-        <label for="html">HTML</label>
-
-        <input type="checkbox" name="topic" velue="css" id="css" />
-        <label for="css">CSS</label>
-
-        <input type="checkbox" name="topic" velue="js" id="js" />
-        <label for="js">JavaScript</label>
+    <form class="form js-speaker-form">
+      <div class="form-field">
+        <label class="form-label" for="name">Username</label>
+        <input
+          class="form-input"
+          id="name"
+          name="user-name"
+          type="text"
+          placeholder="Dmytro Leskiv"
+          autofocus
+        />
       </div>
 
-      <div role="group">
-        <input type="radio" name="experience" velue="junior" id="junior" />
-        <label for="junior">Junior</label>
-
-        <input type="radio" name="experience" velue="middle" id="middle" />
-        <label for="middle">Middle</label>
-
-        <input type="radio" name="experience" velue="senior" id="senior" />
-        <label for="senior">Senior</label>
+      <div class="form-field">
+        <label for="tel">Phone</label>
+        <input id="tel" name="tel" type="tel" />
       </div>
 
-      <label for="date">Date of my project</label>
-      <input
-        type="datetime-local"
-        name="date"
-        id="date"
-        min="2020-04-12T12:00"
-      />
+      <div class="form-field">
+        <label for="mail">Email</label>
+        <input id="mail" name="mail" type="email" placeholder="ddd@mail.com" />
+      </div>
 
-      <br />
-      <label for="pdf">Download yor file</label>
-      <input type="file" name="pdf" id="pdf" />
-      <br />
-      <br />
-      <label for="comment">Leave your comment</label>
-      <textarea name="comment" id="comment" rows="10"> </textarea>
+      <div class="form-field">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" />
+      </div>
 
-      <br />
+      <div class="group" role="group">
+        <h2 class="group-title">Theme</h2>
 
-      <input type="checkbox" name="" id="policy" />
-      <label for="policy">Accept all the rules</label>
-      <br />
+        <ul class="topic-options">
+          <li>
+            <input id="html" name="topic" type="checkbox" velue="html" />
+            <label for="html">HTML</label>
+          </li>
+
+          <li>
+            <input id="css" name="topic" type="checkbox" velue="css" />
+            <label for="css">CSS</label>
+          </li>
+
+          <li>
+            <input id="js" name="topic" type="checkbox" velue="js" />
+            <label for="js">JavaScript</label>
+          </li>
+        </ul>
+      </div>
+
+      <div class="group" role="group">
+        <h2 class="group-title">My expirience</h2>
+        <ul class="experience-options">
+          <li>
+            <input id="junior" name="experience" type="radio" velue="junior" />
+            <label for="junior">Junior</label>
+          </li>
+          <li>
+            <input id="middle" name="experience" type="radio" velue="middle" />
+            <label for="middle">Middle</label>
+          </li>
+          <li>
+            <input id="senior" name="experience" type="radio" velue="senior" />
+            <label for="senior">Senior</label>
+          </li>
+        </ul>
+      </div>
+
+      <div class="form-field">
+        <label for="date">Date of my project</label>
+        <input
+          class="date"
+          id="date"
+          name="date"
+          type="datetime-local"
+          min="2020-04-12T12:00"
+        />
+      </div>
+
+      <div class="form-field">
+        <label for="pdf">Download yor file</label>
+        <input id="pdf" name="pdf" type="file" />
+      </div>
+
+      <div class="form-field">
+        <label for="comment">Leave your comment</label>
+        <textarea
+          class="comment"
+          id="comment"
+          name="comment"
+          rows="10"
+          placeholder="Your comment here..."
+        >
+        </textarea>
+      </div>
+
+      <div class="form-field">
+        <input id="policy" name="policy" type="checkbox" />
+        <label for="policy">Accept all the rules</label>
+      </div>
+
       <button type="submit">Submit</button>
     </form>
 
-    <br />
     <section>
       <div>
         <p>
@@ -92,6 +142,8 @@
             new FormData(e.currentTarget).forEach((value, name) =>
               console.log(`${name}: ${value}`)
             );
+
+            e.currentTarget.reset();
           });
       })();
     </script>

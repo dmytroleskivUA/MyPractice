@@ -1,3 +1,79 @@
+body {
+    color: black;
+}
+
 textarea {
     resize: none;
+}
+
+.form {
+    width: 600px;
+    outline: 1px solid tomato;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.form-field {
+    /* outline: 1px solid blue; */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-field label {
+    margin-bottom: 5px;
+}
+
+.form-field input {
+    margin: 0px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: 1px solid blue;
+}
+
+.form-field input::placeholder {
+    color: #2a2a2a;
+}
+
+.group {
+    margin-bottom: 20px;
+}
+
+
+.group-title {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.topic-options,
+.experience-options {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+/* .topic-options input[type="checkbox"] {
+
+    width: 30px;
+    height: 30px;
+} */
+
+.topic-options label {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.topic-options li {
+    display: flex;
+    align-items: center;
+}
+
+.form .date {
+    border-color: red;
+}
+
+.comment {
+    pad: 8px;
 }
