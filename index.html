@@ -1,151 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Document</title>
-
-    <!-- Custom styles -->
-
+    <title>Стилизация форм</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
       rel="stylesheet"
     />
-    <link href="./css/styles.css" rel="stylesheet" />
+    <link href="./css/common.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- FORMS -->
-
-    <form class="form js-speaker-form">
-      <div class="form-field">
-        <label class="form-label" for="name">Username</label>
-        <input
-          class="form-input"
-          id="name"
-          name="user-name"
-          type="text"
-          placeholder="Dmytro Leskiv"
-          autofocus
-        />
-      </div>
-
-      <div class="form-field">
-        <label for="tel">Phone</label>
-        <input id="tel" name="tel" type="tel" />
-      </div>
-
-      <div class="form-field">
-        <label for="mail">Email</label>
-        <input id="mail" name="mail" type="email" placeholder="ddd@mail.com" />
-      </div>
-
-      <div class="form-field">
-        <label for="password">Password</label>
-        <input id="password" name="password" type="password" />
-      </div>
-
-      <div class="group" role="group">
-        <h2 class="group-title">Theme</h2>
-
-        <ul class="topic-options">
-          <li>
-            <input id="html" name="topic" type="checkbox" velue="html" />
-            <label for="html">HTML</label>
-          </li>
-
-          <li>
-            <input id="css" name="topic" type="checkbox" velue="css" />
-            <label for="css">CSS</label>
-          </li>
-
-          <li>
-            <input id="js" name="topic" type="checkbox" velue="js" />
-            <label for="js">JavaScript</label>
-          </li>
-        </ul>
-      </div>
-
-      <div class="group" role="group">
-        <h2 class="group-title">My expirience</h2>
-        <ul class="experience-options">
-          <li>
-            <input id="junior" name="experience" type="radio" velue="junior" />
-            <label for="junior">Junior</label>
-          </li>
-          <li>
-            <input id="middle" name="experience" type="radio" velue="middle" />
-            <label for="middle">Middle</label>
-          </li>
-          <li>
-            <input id="senior" name="experience" type="radio" velue="senior" />
-            <label for="senior">Senior</label>
-          </li>
-        </ul>
-      </div>
-
-      <div class="form-field">
-        <label for="date">Date of my project</label>
-        <input
-          class="date"
-          id="date"
-          name="date"
-          type="datetime-local"
-          min="2020-04-12T12:00"
-        />
-      </div>
-
-      <div class="form-field">
-        <label for="pdf">Download yor file</label>
-        <input id="pdf" name="pdf" type="file" />
-      </div>
-
-      <div class="form-field">
-        <label for="comment">Leave your comment</label>
-        <textarea
-          class="comment"
-          id="comment"
-          name="comment"
-          rows="10"
-          placeholder="Your comment here..."
+    <ul>
+      <li>
+        <a href="./01-crossbrowser.html">Кросбраузерне оформлення мітки</a>
+      </li>
+      <li>
+        <a href="./02-modern-styles.html">Сучасне оформлення мітки</a>
+      </li>
+      <li>
+        <a href="./03-nested.html"
+          >Input вкладений в мітку, звільняємось від id</a
         >
-        </textarea>
-      </div>
-
-      <div class="form-field">
-        <input id="policy" name="policy" type="checkbox" />
-        <label for="policy">Accept all the rules</label>
-      </div>
-
-      <button type="submit">Submit</button>
-    </form>
-
-    <section>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, officia
-          eius ut natus praesentium quaerat eum facere veritatis nisi? Nulla
-          obcaecati in dignissimos illum veniam molestias quod. Explicabo, quae
-          tenetur.
-        </p>
-      </div>
-    </section>
-
-    <script>
-      (() => {
-        document
-          .querySelector(".js-speaker-form")
-          .addEventListener("submit", (e) => {
-            e.preventDefault();
-
-            new FormData(e.currentTarget).forEach((value, name) =>
-              console.log(`${name}: ${value}`)
-            );
-
-            e.currentTarget.reset();
-          });
-      })();
-    </script>
+      </li>
+      <li><a href="./04-custom.html">Кастомні чекбокси</a></li>
+    </ul>
   </body>
 </html>

@@ -1,22 +1,38 @@
 body {
     color: black;
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 textarea {
     resize: none;
 }
 
+.main-page {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    top: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .form {
     width: 600px;
-    outline: 1px solid tomato;
+    /* outline: 1px solid tomato; */
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
 }
 
 .form-field {
-    /* outline: 1px solid blue; */
-    margin-bottom: 20px;
+    position: relative;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
 
@@ -26,16 +42,84 @@ textarea {
     margin-bottom: 5px;
 }
 
-.form-field input {
+
+.form-input {
+    width: 100%;
+    margin: 0px;
+    padding: 10px 20px;
+    font: inherit;
+    border-radius: 3px;
+    border: 1px solid tomato;
+}
+
+
+/* .form-field input {
+    width: 100%;
     margin: 0px;
     padding: 10px 20px;
     border-radius: 3px;
     border: 1px solid blue;
+} */
+
+/* .form-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: teal;
+
+} */
+
+.form-label {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    transition: transform 250ms linear;
 }
+
+
 
 .form-field input::placeholder {
     color: #2a2a2a;
 }
+
+/* .form-input:placeholder-shown {
+    background-color: tan;
+} */
+
+.form-input:focus+.form-label,
+.form-input:not(:placeholder-shown)+.form-label {
+
+    color: teal;
+    transform: translateY(-250%);
+
+}
+
+.form-field:focus-within>.icon {
+    background-color: blue;
+    transition: transform 250ms linear;
+}
+
+
+/* .form-input:focus~.icon {
+    background-color: blue;
+    transition: transform 250ms linear;
+} */
+
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: tomato;
+}
+
+
+
 
 .group {
     margin-bottom: 20px;
