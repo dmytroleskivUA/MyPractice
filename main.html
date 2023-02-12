@@ -27,42 +27,7 @@
     <link href="./css/styles.css" rel="stylesheet" />
   </head>
   <body>
-    <div><a class="main-page" href="./index.html">Назад на головну</a></div>
-    <br />
-    <!-- FORM 1-->
-
-    <form class="form">
-      <div class="form-field">
-        <input
-          class="form-input"
-          id="name"
-          name="user-name"
-          type="text"
-          placeholder=" "
-          autocomplete="off"
-        />
-        <!-- autofocus -->
-        <label class="form-label" for="name">Username</label>
-        <span class="icon"></span>
-      </div>
-
-      <div class="form-field">
-        <input
-          class="form-input"
-          id="mail"
-          name="mail"
-          type="email"
-          autocomplete="off"
-          placeholder=" "
-        />
-        <label class="form-label" for="mail">Email</label>
-        <span class="icon"></span>
-      </div>
-
-      <button type="submit">Submit</button>
-    </form>
-
-    <!-- FORM 3-->
+    <!-- FORM -->
 
     <form class="form js-speaker-form">
       <div class="form-field">
@@ -78,7 +43,7 @@
 
       <div class="form-field">
         <label for="tel">Phone</label>
-        <input id="tel" name="tel" type="tel" />
+        <input class="form-input" id="tel" name="tel" type="tel" />
       </div>
 
       <div class="form-field">
@@ -113,7 +78,7 @@
       </div>
 
       <div class="group" role="group">
-        <h2 class="group-title">My expirience</h2>
+        <h2 class="group-title">My experience</h2>
         <ul class="experience-options">
           <li>
             <input id="junior" name="experience" type="radio" velue="junior" />
@@ -166,26 +131,15 @@
       <button type="submit">Submit</button>
     </form>
 
-    <section>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, officia
-          eius ut natus praesentium quaerat eum facere veritatis nisi? Nulla
-          obcaecati in dignissimos illum veniam molestias quod. Explicabo, quae
-          tenetur.
-        </p>
-      </div>
-    </section>
-
     <script>
       (() => {
         document
-          .querySelector(".js-speaker-form")
-          .addEventListener("submit", (e) => {
+          .querySelector('.js-speaker-form')
+          .addEventListener('submit', e => {
             e.preventDefault();
 
             new FormData(e.currentTarget).forEach((value, name) =>
-              console.log(`${name}: ${value}`)
+              console.log(`${name}: ${value}`),
             );
 
             e.currentTarget.reset();
