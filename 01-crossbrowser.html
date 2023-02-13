@@ -5,37 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Кроссбраузерная декоративная метка и иконка</title>
     <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
+      rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./01-crossbrowser.css" />
+    <link href="./01-crossbrowser.css" rel="stylesheet" />
   </head>
   <body>
     <a href="./index.html">Назад на головну</a>
 
+    <br />
+    <br />
+
     <form class="form" autocomplete="off">
       <div class="form-field">
+        <label class="form-label" for="name">Ім'я</label>
         <input
-          type="text"
           class="form-input"
-          name="name"
           id="name"
+          name="name"
+          type="text"
           placeholder=" "
         />
-        <label for="name" class="form-label">Ім'я</label>
+
         <span class="icon"></span>
       </div>
 
       <div class="form-field">
         <input
-          type="email"
           class="form-input"
-          name="mail"
           id="mail"
+          name="mail"
+          type="email"
           placeholder=" "
         />
-        <label for="mail" class="form-label">Пошта</label>
+        <label class="form-label" for="mail">Пошта</label>
         <span class="icon"></span>
       </div>
 

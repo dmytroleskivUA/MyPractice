@@ -8,6 +8,11 @@ li {
     /* outline: 1px solid black; */
 }
 
+.list {
+
+    list-style: none;
+}
+
 .checkbox {
     /* -webkit-appearance: none;
   -moz-appearance: none;
@@ -38,9 +43,9 @@ li {
 
 .checkbox:checked+.icon {
     transform: scale(1.2);
-    border-color: transparent;
+    border-color: orange;
     background-color: orange;
-    background-image: url('../img/full-check.svg');
+    background-image: url('../images/Property\ 1=Default.svg');
     background-size: contain;
     background-origin: border-box;
 }

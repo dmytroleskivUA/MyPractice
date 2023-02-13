@@ -30,7 +30,24 @@
     <!-- FORM -->
 
     <form class="form js-speaker-form">
-      <div class="form-field">
+      <label class="form-field">
+        <span class="form-label">Username</span>
+        <input class="form-input" name="user-name" type="text" placeholder="John Brown" autofocus />
+      </label>
+
+      <label class="form-field">
+        <span class="form-label">Phone</span>
+        <input class="form-input" name="tel" type="tel" placeholder="+380-444-333-22"/>
+      </label>
+
+      <label class="form-field">
+        <span class="form-label">Email</span>
+        <input class="form-input" name="mail" type="mail" placeholder="j.brown@mail.com" />
+      </label>
+
+
+
+        <!-- <div class="form-field">
         <label class="form-label" for="name">Username</label>
         <input
           class="form-input"
@@ -53,82 +70,97 @@
 
       <div class="form-field">
         <label for="password">Password</label>
-        <input id="password" name="password" type="password" />
+        <input id="password" name="password" type="password" /> -->
+
+        <div class="group" role="group">
+          <h2 class="group-title">Theme</h2>
+
+          <ul class="topic-options">
+            <li>
+              <input id="html" name="topic" type="checkbox" velue="html" />
+              <label for="html">HTML</label>
+            </li>
+
+            <li>
+              <input id="css" name="topic" type="checkbox" velue="css" />
+              <label for="css">CSS</label>
+            </li>
+
+            <li>
+              <input id="js" name="topic" type="checkbox" velue="js" />
+              <label for="js">JavaScript</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="group" role="group">
+          <h2 class="group-title">My experience</h2>
+          <ul class="experience-options">
+            <li>
+              <input
+                id="junior"
+                name="experience"
+                type="radio"
+                velue="junior"
+              />
+              <label for="junior">Junior</label>
+            </li>
+            <li>
+              <input
+                id="middle"
+                name="experience"
+                type="radio"
+                velue="middle"
+              />
+              <label for="middle">Middle</label>
+            </li>
+            <li>
+              <input
+                id="senior"
+                name="experience"
+                type="radio"
+                velue="senior"
+              />
+              <label for="senior">Senior</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="form-field">
+          <label for="date">Date of my project</label>
+          <input
+            class="date"
+            id="date"
+            name="date"
+            type="datetime-local"
+            min="2020-04-12T12:00"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="pdf">Download yor file</label>
+          <input id="pdf" name="pdf" type="file" />
+        </div>
+
+        <div class="form-field">
+          <label for="comment">Leave your comment</label>
+          <textarea
+            class="comment"
+            id="comment"
+            name="comment"
+            rows="10"
+            placeholder="Your comment here..."
+          >
+          </textarea>
+        </div>
+
+        <div class="form-field">
+          <input id="policy" name="policy" type="checkbox" />
+          <label for="policy">Accept all the rules</label>
+        </div>
+
+        <button type="submit">Submit</button>
       </div>
-
-      <div class="group" role="group">
-        <h2 class="group-title">Theme</h2>
-
-        <ul class="topic-options">
-          <li>
-            <input id="html" name="topic" type="checkbox" velue="html" />
-            <label for="html">HTML</label>
-          </li>
-
-          <li>
-            <input id="css" name="topic" type="checkbox" velue="css" />
-            <label for="css">CSS</label>
-          </li>
-
-          <li>
-            <input id="js" name="topic" type="checkbox" velue="js" />
-            <label for="js">JavaScript</label>
-          </li>
-        </ul>
-      </div>
-
-      <div class="group" role="group">
-        <h2 class="group-title">My experience</h2>
-        <ul class="experience-options">
-          <li>
-            <input id="junior" name="experience" type="radio" velue="junior" />
-            <label for="junior">Junior</label>
-          </li>
-          <li>
-            <input id="middle" name="experience" type="radio" velue="middle" />
-            <label for="middle">Middle</label>
-          </li>
-          <li>
-            <input id="senior" name="experience" type="radio" velue="senior" />
-            <label for="senior">Senior</label>
-          </li>
-        </ul>
-      </div>
-
-      <div class="form-field">
-        <label for="date">Date of my project</label>
-        <input
-          class="date"
-          id="date"
-          name="date"
-          type="datetime-local"
-          min="2020-04-12T12:00"
-        />
-      </div>
-
-      <div class="form-field">
-        <label for="pdf">Download yor file</label>
-        <input id="pdf" name="pdf" type="file" />
-      </div>
-
-      <div class="form-field">
-        <label for="comment">Leave your comment</label>
-        <textarea
-          class="comment"
-          id="comment"
-          name="comment"
-          rows="10"
-          placeholder="Your comment here..."
-        >
-        </textarea>
-      </div>
-
-      <div class="form-field">
-        <input id="policy" name="policy" type="checkbox" />
-        <label for="policy">Accept all the rules</label>
-      </div>
-
-      <button type="submit">Submit</button>
     </form>
 
     <script>
