@@ -1,0 +1,94 @@
+// SLIDER
+
+/* Основные стили */
+/* Слайдер */
+.slick-slider {
+    min-width: 0;
+}
+
+/* Ограничивающая оболочка */
+.slick-list {
+    // overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track {
+    display: flex;
+    // align-items: flex-start;
+}
+
+/* Слайд */
+.slick-slide {}
+
+/* Слайд активный */
+.slick-slide.slick-active {}
+
+/* Слайд основной */
+.slick-slide.slick-current {}
+
+/* Слайд по центру */
+.slick-slide.slick-center {}
+
+/* Стрелка */
+.slick-arrow {}
+
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+    left: 52px;
+}
+
+.slick-prev::before {
+    display: none;
+}
+
+/* Стрелка вправо */
+.slick-arrow.slick-next {}
+
+.slick-next::before {
+    display: none;
+}
+
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+    opacity: 0.3;
+}
+
+/* Точки */
+.slick-dots {}
+
+.slick-dots li {}
+
+.slick-dots button {}
+
+/* Конкретный слайдер */
+.autoplay {
+    position: relative;
+}
+
+// .autoplay .slick-arrow {
+//   position: absolute;
+//   bottom: -50%;
+//   left: 50%;
+//   z-index: 2;
+//   margin: 20px;
+//   background-color: #121212;
+//   width: 30px;
+//   height: 60px;
+// }
+.autoplay .slick-arrow {
+    z-index: 10;
+    background-color: #121212;
+    width: 35px;
+    height: 30px;
+    background-repeat: no-repeat;
+    border: 2px solid var(--text-color-primary);
+    margin-top: 330px;
+}
+
+.content {
+    display: flex;
+    gap: 40px;
+    background-color: tomato;
+    width: 40px;
+    height: 40px;
+}

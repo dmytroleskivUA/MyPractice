@@ -45,7 +45,7 @@ li {
     transform: scale(1.2);
     border-color: orange;
     background-color: orange;
-    background-image: url('../images/Property\ 1=Default.svg');
+    background-image: url('../images/PropertyDefault.svg');
     background-size: contain;
     background-origin: border-box;
 }
